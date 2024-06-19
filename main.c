@@ -2,12 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-void menu();
 void gameStart();
+void clearConsole();
 
 char palavra[20];
 
 int main(int argc, char const *argv[]) {
+    clearConsole();
     if (argc != 2) {
         printf("Palavra nao especificada\n");
         return 1;
@@ -20,7 +21,8 @@ int main(int argc, char const *argv[]) {
 }
 
 void gameStart() {
-    printf("iniciando o jogo %s", palavra);
+    // TODO digitar letra
+    // TODO logica de procurar a letra
 }
 
 void clearConsole() {
