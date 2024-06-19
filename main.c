@@ -6,9 +6,10 @@ void gameStart();
 
 char palavra[20];
 
-int main() {
+int main() {   
     menu();
     gameStart();
+    //alex
     return 0;
 }
 
