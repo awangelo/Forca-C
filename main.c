@@ -1,35 +1,32 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void menu();
 void gameStart();
 
 char palavra[20];
 
-int main() {
-    menu();
+int main(int argc, char const *argv[]) {
+    if (argc != 2) {
+        printf("Palavra nao especificada\n");
+        return 1;
+    }
+    strncpy(palavra, argv[1], sizeof(palavra));
     gameStart();
+
+    printf("\n");
     return 0;
 }
 
-void menu() {
-    clearConsole();
-    printf("Digite uma palavra para ser adivinhada: ");
-    fgets(palavra, 20, stdin);
-    printf("Iniciando jogo com a palavra: %s ", palavra);
-    system("sleep 3");
-
-    printf("\n");
-}
-
 void gameStart() {
-
+    printf("iniciando o jogo %s", palavra);
 }
 
 void clearConsole() {
-    #ifdef _WIN32
-        system("cls");
-    #else
-        system("clear");
-    #endif
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
 }
