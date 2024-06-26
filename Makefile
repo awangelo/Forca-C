@@ -4,7 +4,9 @@ CFLAGS = -Wall -Wextra -g3
 TARGET = jogo_da_forca
 SRCS = main.c
 
-all:
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
 	$(CC) $(CFLAGS) $(SRCS) -o $(TARGET)
 
 clean:

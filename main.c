@@ -7,7 +7,9 @@ void clearConsole();
 
 char palavra[20];
 
-int main(int argc, char const *argv[]) {
+int
+main(int argc, char const *argv[])
+{
     clearConsole();
     if (argc != 2) {
         printf("Palavra nao especificada\n");
@@ -16,16 +18,20 @@ int main(int argc, char const *argv[]) {
     strncpy(palavra, argv[1], sizeof(palavra));
     gameStart();
 
-    printf("\n");
+    printf("%s\n", palavra);
     return 0;
 }
 
-void gameStart() {
+void
+gameStart()
+{
     // TODO digitar letra
     // TODO logica de procurar a letra
 }
 
-void clearConsole() {
+void
+clearConsole()
+{
 #ifdef _WIN32
     system("cls");
 #else
