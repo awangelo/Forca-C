@@ -9,7 +9,6 @@ char palavra[20];
 int main() {   
     menu();
     gameStart();
-    //alex
     return 0;
 }
 
