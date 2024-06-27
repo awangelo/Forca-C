@@ -46,11 +46,6 @@ gameStart()
         scanf(" %c", &guessedLetter);
         guessedLetter = tolower(guessedLetter);
 
-        if (!isalpha(guessedLetter)) {
-            printf("Entrada inválida. Por favor, digite uma letra.\n");
-            continue;
-        }
-
         int correctGuess = 0;
         for (int i = 0; i < wordLength; i++) {
             if (tolower(palavra[i]) == guessedLetter) {
