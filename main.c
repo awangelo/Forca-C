@@ -67,7 +67,9 @@ gameStart()
 
     clearConsole();
     displayHangman(attempts);
-    printf("Você perdeu! A palavra era: %s\n", palavra);
+    
+
+    
 }
 
 void
